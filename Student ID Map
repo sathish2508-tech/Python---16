@@ -1,0 +1,13 @@
+def convert_to_key_value_pairs(keys, values):
+    dic_a = {}
+    lenght = len(keys)
+    for i in range(lenght):
+        dic_a[keys[i]] = values[i]
+    return dic_a
+keys = input().split(",")
+values = input().split(",")
+container = convert_to_key_value_pairs(keys, values)
+sep_key_val = container.items()
+accending_order = sorted(sep_key_val)
+for item in accending_order:
+    print(*item)
