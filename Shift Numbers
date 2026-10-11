@@ -1,0 +1,9 @@
+string = input()
+char = ""
+num = ""
+for i in string:
+    if i.isdigit():
+        num += i 
+    else:
+        char += i 
+print(char + num)
