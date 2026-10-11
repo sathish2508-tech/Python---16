@@ -1,0 +1,12 @@
+sentaince = input().split()
+sentaince.sort()
+freq = {}
+for item in sentaince:
+    if item in freq:
+        freq[item] += 1 
+    else:
+        freq[item] = 1 
+for item in sentaince:
+    if item in freq:
+        print("{}: {}".format(item, freq[item]))
+        del freq[item]
