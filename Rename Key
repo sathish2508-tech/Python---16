@@ -1,0 +1,17 @@
+fruits = {
+    "apples": 10,
+    "bananas": 20,
+    "mangoes": 15,
+    "oranges": 200,
+    "watermelons": 50
+}
+s1 = input()
+s2 = input()
+fruit_items = list(fruits.items())
+fruit_item_copy = fruit_items.copy()
+for i in range(len(fruit_items)):
+    if fruit_items[i][0] == s1:
+        update_tuple = (s2, fruit_items[i][1])
+        fruit_item_copy[i] = update_tuple
+print(fruit_item_copy)
+# Write your code here
