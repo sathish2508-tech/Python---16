@@ -1,0 +1,10 @@
+num = int(input())
+new_list = []
+for i in range(num):
+    list_num = input().split()
+    list_a = []
+    for item in list_num:
+        val = int(item)
+        list_a.append(val)
+    new_list.append(list_a)
+print(new_list)
