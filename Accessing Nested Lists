@@ -1,0 +1,15 @@
+list_a = [('apple', 'banana', 'orange', 'grapes'), ('cricket', 'football', 'hockey'), ('car', 'bicycle', 'bus')]
+# Write your code here
+num = int(input())
+new_list = []
+for i in range(num):
+    line = input().split()
+    index = []
+    for item in line:
+        val = int(item)
+        index.append(val)
+    first = index[0]
+    second = index[1]
+    new = list_a[first][second]
+    new_list.append(new)
+print(new_list)
