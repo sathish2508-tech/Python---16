@@ -1,0 +1,13 @@
+def find_lap(str_1, str_2):
+    overlap = ""
+    min_len = min(len(str_1), len(str_2))
+    for i in range(1, min_len + 1):
+        if str_1[-i:] == str_2[:i]:
+            overlap = str_1[-i:]
+    if overlap:
+        print(overlap)
+    else:
+        print("No overlapping")
+str_1 = input()
+str_2 = input()
+find_lap(str_1, str_2)
