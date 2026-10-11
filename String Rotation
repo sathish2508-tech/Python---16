@@ -1,0 +1,10 @@
+s1 = input()
+s2 = input()
+if len(s1) != len(s2):
+    print("No Match")
+else:
+    pos = s2.find(s1[0])
+    if pos == -1:
+        print("No Match")
+    else:
+        print(pos)
