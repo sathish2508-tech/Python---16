@@ -1,0 +1,22 @@
+def get_con_sum(new_list):
+    con_sum = []
+    for i in range(len(new_list)-1):
+        add_list = new_list[i] + new_list[i+1]
+        con_sum.append(add_list)
+    return con_sum
+def get_consum_triangle(new_list):
+    while len(new_list) > 1:
+        con_sum = get_con_sum(new_list)
+        print(con_sum)
+        new_list = con_sum
+    return
+def convert_str_to_int(string):
+    new_list = []
+    for item in string:
+        int_num = int(item)
+        new_list.append(int_num)
+    return new_list
+string = input().split(",")
+int_list = convert_str_to_int(string)
+print(int_list)
+get_consum_triangle(int_list)
