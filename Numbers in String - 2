@@ -1,0 +1,16 @@
+string = input()
+s1 = []
+num = ""
+for item in string:
+    if item.isdigit():
+        num += item
+    else:
+        if num != "":
+            s1.append(int(num))
+            num = ""
+if num != "":
+    s1.append(int(num))
+total = sum(s1)
+avg = round(total / len(s1), 2)
+print(total)
+print(avg)
