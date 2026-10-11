@@ -1,0 +1,12 @@
+m, n = map(int, input().split())
+matrix = []
+for _ in range(m):
+    row = list(map(int, input().split()))
+    matrix.extend(row)
+matrix.sort()
+index = 0
+for i in range(m):
+    for j in range(n):
+        print(matrix[index], end = " ")
+        index += 1 
+    print()
