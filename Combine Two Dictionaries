@@ -1,0 +1,23 @@
+def convert_str_to_int(std_id):
+    new_list = []
+    for item in std_id:
+        val = int(item)
+        new_list.append(val)
+    return new_list
+def convert_key_val_pairs(keys, values):
+    dictionary = {}
+    for i in range(len(keys)):
+        dictionary[keys[i]] = values[i]
+    return dictionary
+std_name_a = input().split()
+std_id_a = input().split()
+std_name_b = input().split()
+std_id_b = input().split()
+int_list_a = convert_str_to_int(std_id_a)
+int_list_b = convert_str_to_int(std_id_b)
+key_value_a = convert_key_val_pairs(std_name_a, int_list_a)
+key_value_b = convert_key_val_pairs(std_name_b, int_list_b)
+key_value_a.update(key_value_b)
+pairs = key_value_a.items()
+accending_order = sorted(pairs)
+print(accending_order)
