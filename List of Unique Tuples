@@ -1,0 +1,18 @@
+def convert_str_to_int(num_list):
+    new_list = []
+    for item in num_list:
+        val = int(item)
+        new_list.append(val)
+    return new_list
+n = int(input())
+list_val = []
+for i in range(n):
+    num_list = input().split()
+    list_con = convert_str_to_int(num_list)
+    list_len = len(list_con)
+    set_num = set(list_con)
+    set_len = len(set_num) 
+    is_contain = set_len == list_len
+    if is_contain:
+        list_val.append(list_con)
+print(list_val)
