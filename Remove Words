@@ -1,0 +1,7 @@
+string = input().split()
+n = int(input())
+sentaince = []
+for i in string:
+    if len(i) != n:
+        sentaince.append(i)
+print(" ".join(sentaince))
