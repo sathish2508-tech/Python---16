@@ -1,0 +1,25 @@
+size = input().split()
+m = int(size[0])
+n = int(size[1])
+matrix = []
+for _ in range(m):
+    row = input().split()
+    for i in range(n):
+        row[i] = int(row[i])
+    matrix.append(row)
+for col in range(n):
+    i, j = 0, col 
+    diagonal = []
+    while i < m and j >= 0:
+        diagonal.append(matrix[i][j])
+        i += 1 
+        j -= 1
+    print(" ".join(str(x) for x in diagonal))
+for row in range(1, m):
+    i, j = row, n - 1 
+    diagonal = []
+    while i < m and j >= 0:
+        diagonal.append(matrix[i][j])
+        i += 1 
+        j -= 1 
+    print(" ".join(str(x) for x in diagonal))
