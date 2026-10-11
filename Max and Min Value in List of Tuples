@@ -1,0 +1,14 @@
+num = int(input())
+new_list = []
+zero_index = []
+first_index = []
+for i in range(num):
+    num_list = input().split()
+    start_value = int(num_list[0])
+    zero_index.append(start_value)
+    last_value = int(num_list[1])
+    first_index.append(last_value)
+zero_index_min_max = (max(zero_index), min(zero_index))
+first_index_min_max = (max(first_index), min(first_index))
+print(zero_index_min_max)
+print(first_index_min_max)
