@@ -1,0 +1,9 @@
+def char_count(string):
+    line = string.lower()
+    set_con = set(line)
+    set_con.discard(" ")
+    for char in sorted(set_con):
+        msg = "{char}: {count}"
+        print(msg.format(char = char, count = line.count(char)))
+string = input()
+char_count(string)
