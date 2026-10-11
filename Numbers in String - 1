@@ -1,0 +1,14 @@
+string = input().replace(" ", "")
+s1 = ""
+for item in string:
+    if item.isdigit():
+        s1 += item
+    continue
+sum = 0
+avg = 0
+for i in range(len(s1)):
+    val = int(s1[i])
+    sum += val
+avg = round(sum / len(s1), 2)
+print(sum)
+print(avg)
