@@ -1,0 +1,11 @@
+num_list = [(1, 2, 3, 4, 5, 6), (2, 4, 6, 8), (1, 3, 5, 7)]
+# Write your code here
+num = int(input())
+new_list = []
+for item in num_list:
+    current_tuple = item
+    if num in current_tuple:
+        n_index = current_tuple.index(num)
+        current_tuple = current_tuple[:n_index] + current_tuple[n_index+1:]
+    new_list.append(current_tuple)
+print(new_list)
